@@ -1,0 +1,201 @@
+/* ---------- PAGE LAYOUT ---------- */
+h1 .pre { 
+   font-family: 'Raleway', sans-serif;
+   position: absolute;
+   top: 105px;
+   left: 122px;
+   z-index: 2;
+   text-transform: uppercase;
+}
+h1 .logo {  
+   font-family: 'Raleway', sans-serif;
+   font-size: 330px;
+   position: absolute;
+   top: -58px;
+   left: -20px;
+   color: white;
+   letter-spacing: -42px;
+   z-index:1;
+   text-shadow:
+   -2px -2px 0 #1b0e35,  
+    2px -2px 0 #1b0e35,
+    -2px 2px 0 #1b0e35,
+     2px 2px 0 #1b0e35;
+}
+h1 .title { 
+   font-family: 'Sumana', serif; 
+   font-size: 180px;
+   position: absolute;
+   top: 50px;
+   left: 440px;
+   letter-spacing: 2px;
+   z-index: 1;
+   text-shadow:
+   -1px -1px 0 #fff,  
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+     1px 1px 0 #fff;
+}
+h2 {
+   font-size: 44px;
+   position: absolute;
+   top: 250px;
+   left: 58px;
+}
+h2 span{
+   font-size: 100px;
+   line-height: 50px;
+}
+h2.subtitle { 
+   font-family: 'Sumana', serif; 
+   font-size: 24px;
+   position: absolute;
+   top: 50px;
+   left: 450px;
+   font-style: italic;
+   text-shadow:
+   -1px -1px 0 #b2b2b4,  
+    1px -1px 0 #b2b2b4,
+    -1px 1px 0 #b2b2b4,
+     1px 1px 0 #b2b2b4;
+}
+p.gq {
+   font-size: 12px;
+   position: absolute;
+   top: 230px;
+   left: 40px;
+   text-transform: uppercase;
+   font-family: 'Raleway', sans-serif;
+}
+p:nth-of-type(2) {
+   font-size: 15px;
+   position: absolute;
+   top: 355px;
+   left: 10px;  
+   text-transform: uppercase;
+   letter-spacing: -1px;
+}
+h3 {
+   font-size: 88px;
+   position: absolute;
+   top: 270px;
+   left: 550px;
+   width: 300px;
+   color: #fff;
+   line-height: 90px;
+   letter-spacing: 2px;
+}
+.lower { 
+   font-family: 'Rozha One', serif; 
+}
+.up-left h2 { 
+   font-size: 33px;
+}
+.up-left h2 span { 
+   font-size: 75px;
+}
+.up-left p.uk { 
+   left: 58px;
+}
+.up-left h4 {
+   font-size: 34px;
+   position: absolute;
+   top: 410px;
+   left: 58px;
+   color: #fff;
+   line-height: 35px;
+   margin-bottom: 10px;
+}
+.up-left h4 span {
+   display: table;
+   background-color: #1b0e35;
+   margin-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+}
+.up-left h4 span:nth-of-type(1) {
+   display: table;
+   margin-bottom: 0px;
+}
+.up-left h4 span:nth-of-type(6) {
+   font-size: 14px;
+   padding-top: 15px;
+   padding-bottom: 0px;
+   line-height: 24px;
+}
+.low-left h4 {
+   font-size: 34px;
+   position: absolute;
+   top: 910px;
+   left: 58px;
+   line-height: 35px;
+}
+.low-left h4 span {
+   display: table;
+   background-color: #fff;
+   margin-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+}
+.low-right h4 {
+   font-size: 34px;
+   line-height: 35px;
+}
+.low-right > h4 span {
+   display: table;
+   position: absolute;
+   padding-left: 10px;
+   padding-right: 10px;
+}
+.low-right > h4:nth-child(1) span:nth-child(1) {
+   top: 765px;
+   left: 540px;
+   -webkit-transform: rotate(-3deg);
+   transform: rotate(-3deg);
+}
+.low-right > h4:nth-child(1) span:nth-child(2) {
+   top: 820px;
+   left: 546px;
+   -webkit-transform: rotate(3deg);
+   transform: rotate(3deg);
+}
+.low-right > h4:nth-child(2) span {
+   top: 920px;
+   left: 340px;
+   font-size: 36px;
+   -webkit-transform: rotate(-18deg);
+   transform: rotate(-18deg);
+}
+.low-right > h4:nth-child(3) span {
+   top: 955px;
+   left: 620px;
+   font-size: 36px;
+   -webkit-transform: rotate(5deg);
+   transform: rotate(5deg);
+}
+.low-right > h4:nth-child(4) span {
+   top: 1053px;
+   left: 367px;
+   font-size: 36px;
+   -webkit-transform: rotate(-8deg);
+   transform: rotate(-8deg);
+}
+.low-right h4.white span {
+   color: #1b0e35;
+   background-color: #fff;
+}
+.low-right h4.black span {
+   color: #fff;
+   background-color: #1b0e35;
+}
+.container {
+   background-image: url("https://media.meltystyle.fr/article-3297258-ajust_930-f4990049/jaden-smith-pour-l-edition-ss16-de-gq-style.jpg");
+   backgroung-repeat: no-repeat;
+   width: 900px;
+   height: 1165px;
+   margin-left: 30px;
+   background-position: -30px 0px;
+}
+.f-blue {
+   color: #1b0e35;
+}

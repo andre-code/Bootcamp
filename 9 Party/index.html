@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fiesta App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="controls">
+      <button id="record"></button>
+      <button id="play"></button>
+  </div>  
+  <div id="keys-panel">
+      <div id="key-panel-a" class="key-panel-white">A</div>
+      <div id="key-panel-s" class="key-panel-white">S</div>
+      <div id="key-panel-d" class="key-panel-white">D</div>
+      <div id="key-panel-f" class="key-panel-white">F</div>
+      <div id="key-panel-g" class="key-panel-white">G</div>
+      <div id="key-panel-h" class="key-panel-white">H</div>
+      <div id="key-panel-j" class="key-panel-white">J</div>
+      <div id="key-panel-k" class="key-panel-white">K</div>
+      <div id="key-panel-l" class="key-panel-white">L</div>
+      <div id="key-panel-m" class="key-panel-white">M</div>
+    </div>
+  <div id="equalizer">
+    <div id="key-box-a" class="key-box"></div>
+    <div id="key-box-s" class="key-box"></div>
+    <div id="key-box-d" class="key-box"></div>
+    <div id="key-box-f" class="key-box"></div>
+    <div id="key-box-g" class="key-box"></div>
+    <div id="key-box-h" class="key-box"></div>
+    <div id="key-box-j" class="key-box"></div>
+    <div id="key-box-k" class="key-box"></div>
+    <div id="key-box-l" class="key-box"></div>
+    <div id="key-box-m" class="key-box"></div>
+  </div>
+  
+  <audio src="sounds/fizzle.wav" class="key-a" ></audio>
+  <audio src="sounds/hat.wav" class="key-s"  ></audio>
+  <audio src="sounds/kick.wav" class="key-d"  ></audio>
+  <audio src="sounds/snare.wav" class="key-f" ></audio>
+  <audio src="sounds/snarezz.wav" class="key-g" ></audio>
+  <audio src="sounds/synth.wav" class="key-h" ></audio>
+  <audio src="sounds/vox1.wav" class="key-j" ></audio>
+  <audio src="sounds/vox2.wav" class="key-k" ></audio>
+  <audio src="sounds/vox3.wav" class="key-l" ></audio>
+  <audio src="sounds/wood.wav" class="key-m" ></audio>
+
+    <script> 
+    var songsRecorded = [];
+    var timingSong = 0;
+    var recordSong = function( key ) {
+      songsRecorded.push( key );
+    }
+    var playSong = function( keyName , playingSong) {  
+      var audioElement = document.querySelector(".key-" + keyName);
+      var divElement = document.querySelector("#key-box-" + keyName);
+      var keyElement = document.querySelector("#key-panel-" + keyName);
+      var timeSong = timingSong * 100;
+      if(audioElement) {         
+        audioElement.currentTime = 2;
+        divElement.classList.add("gradient");
+        keyElement.classList.add("key-panel-pink");
+        keyElement.classList.remove("key-panel-white");
+        audioElement.play();        
+        setTimeout(function(){
+          divElement.classList.remove("gradient");
+          keyElement.classList.add("key-panel-white");
+          keyElement.classList.remove("key-panel-pink");
+        }, 500);
+      } else {
+        console.log("key don't available to play ");
+      }
+    }
+    var resetRecordSong = function() {
+      songsRecorded = [];
+      timingSong = 0;
+    }
+    var playRecordSong = function() {
+      songsRecorded.forEach(function(element) {
+        var audioElement = document.querySelector(".key-" + element);
+        if(audioElement) {   
+          timingSong += audioElement.duration; 
+          var timeSong = timingSong*100;
+          setTimeout(function(){
+            playSong ( element, true );
+          }, timeSong);
+        }
+      });
+      timingSong = 0;
+    }
+    var getKeySong = function( keys ) {
+      var myKey = keys.key;
+      recordSong (myKey);
+      playSong ( myKey, false );
+    }
+
+    document.addEventListener('keydown', getKeySong);
+    document.getElementById("play").addEventListener("click", function(){
+      playRecordSong();
+    });
+    document.getElementById("record").addEventListener("click", function(){
+      resetRecordSong();
+    });
+    </script>
+</body>
+</html>

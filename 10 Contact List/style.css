@@ -1,0 +1,73 @@
+section {
+  width: 600px;
+  min-height: 600px;
+  float: left;
+}
+article figure {
+  width: 440px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  padding: 20px;
+  box-shadow: 5px 5px 12px #ccc;
+}
+.figure-gray {
+  background-color: #efefef9e;
+}
+.figure-blue {
+  background-color: #31a8a942;
+}
+article figure figcaption {
+  padding: 15px;
+  width: 280px;
+}
+article figure figcaption span {
+  text-transform: capitalize;
+  font-family: 'Satisfy', cursive;
+  font-size: 24px;
+}
+article figure figcaption p {
+  font-family: 'Roboto', sans-serif;
+}
+article figure figcaption img {
+  float: right;
+}
+.img-photo {
+  border-radius: 50%;
+}
+
+aside {
+  width: 600px;
+  float: left;
+  text-align: center;
+}
+aside div:nth-of-type(1) {
+  padding-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+aside h1 {
+  text-transform: capitalize;
+  font-family: 'Satisfy', cursive;
+  font-size: 38px;
+  text-align: center;
+  color: #10a5af;
+  margin: 15px;
+}
+.hovered {
+  border: dotted 5px #10a5af;
+}
+.box-favorites {
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f7f7;
+}
+.welcome-drag-and-drop {
+  font-family: 'Satisfy', cursive;
+    font-size: 40px;
+    color: #ccc;
+    margin: auto;
+    border: 3px dotted;
+    padding: 20px;
+}

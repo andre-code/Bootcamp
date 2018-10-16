@@ -1,0 +1,108 @@
+/*
+  Bg image: http://xinature.com/wp-content/uploads/2016/08/flowers-sunrise-purple-lavesnder-nature-lavender-sunset-lavendel-clouds-sky-field-flower-wallpaper-for-desktop-1920x1080.jpg
+  Cat image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBxkKU5nAwXRBXkyQIUL4R_CN9hR1jpwmf4S7MUcTrw92-nWhb
+  Avatar: https://image.flaticon.com/icons/svg/146/146025.svg
+
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  
+  Colors:
+    orange: #e76022
+    blue: #00bcd4
+    red: #da312e
+    green: #61b812
+    yellow: #f1d445
+*/
+.container {
+  background-image: url("http://xinature.com/wp-content/uploads/2016/08/flowers-sunrise-purple-lavesnder-nature-lavender-sunset-lavendel-clouds-sky-field-flower-wallpaper-for-desktop-1920x1080.jpg");
+  background-size: cover;
+  width: 750px;
+  height: 400px;
+  padding-top: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+header {
+  height: 100px;
+  width: 100%;
+}
+h1, h2 {
+  color: #fff;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+h1  {
+  float: left;
+}
+h2 {
+  float: right;
+}
+h2 span {
+  font-size: 12px;
+  display: block;
+}
+header img {
+  width: 40px;
+  float: right;
+  margin-left: 10px;
+}
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+.section-left {
+  height: 200px;
+  width: 510px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.section-left div {
+  margin: 1px;
+}
+.section-left div:nth-child(1) {
+  background-color: #00bcd4;
+}
+.section-left div:nth-child(2) {
+  background-color: #e76022;
+}
+.section-left div:nth-child(3) {
+  background-color: #da312e;
+}
+.section-left div:nth-child(4) {
+  background-color: #61b812;
+}
+.section-left div:nth-child(5) {
+  background-color: #f1d445;
+}
+.section-left div:nth-child(6) {
+  background-color: #da312e;
+}
+
+.section-right {
+  height: 200px;
+  width: 210px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.section-right div {
+  margin:1px;
+}
+.section-right div:nth-child(1) {
+  background-color: #00bcd4;
+}
+.section-right div:nth-child(2) {
+  background-color: #61b812;
+}
+.section-right div:nth-child(3) {
+  background-color: #f1d445;
+}
+.section-right div:nth-child(4) {
+  background-color: #da312e;
+}
+.rectangulo {
+  width: 200px;
+  height: 100px;
+}
+.cuadro {
+  width: 100px;
+  height: 100px;
+}

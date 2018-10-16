@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Blog Layout</title>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <!-- NAV SECTION -->
+    <nav role="menubar">
+      <label for="icon-menu-hamburger">
+        <input type="checkbox" id="icon-menu-hamburger"/>
+        <div class="container icon-menu-hamburger">
+          <div class="menu"></div>
+        </div>
+        <ul class="menu-ul">
+            <li>
+              <a href="#" role="menuitem">Home</a>
+            </li>
+            <li>
+              <a href="#" role="menuitem">About</a>
+            </li>
+            <li>
+              <a href="#" role="menuitem">Features</a>
+            </li>
+            <li>
+              <a href="#" role="menuitem">Princing</a>
+            </li>
+            <li>
+              <a href="#" role="menuitem">Contact Us</a>
+            </li>
+            <li>
+                <img src="images/search-icon.svg" alt="Icon search" title="Search Image">
+            </li>
+          </ul>
+      </label>    
+    </nav>
+  </header>
+
+  <!-- MY FAVORITES SECTION -->
+  <section id="my-favorites">
+    <section role="banner">
+      <figure>
+          <img src="images/sf-image.jpg" atl="Image of sanfrancisco bridge" title="Bridge Image">
+          <figcaption>
+            My Best Place
+            <div class="line"></div>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/fuits-image.jpg" alt="Image with fruits, vegetables and nuts" Title="Food Image">
+          <figcaption>
+            My Fav Food
+            <div class="line"></div>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/place-image.jpg" alt="Image of a city looks as a New York" title="City Image">
+          <figcaption>
+            My Fav Season
+            <div class="line"></div>
+          </figcaption>
+        </figure>
+    </section>
+  </section>
+
+  <div id="main-content">
+     <!-- MAIN CONTENT -->
+    <section id="article" role="article">
+      <h1>MY TRIP TO AMSTERDAM</h1>
+      <figure>
+        <img src="images/blog-image.jpg" alt="Image of a house on Amsterdam" title="House Image">
+      </figure>
+      <p>
+          Amsterdam is one of my favourite cities. After spending a week there. 
+          I feel like I've found a home away from Paris (I'm sorry London but you just don't cut it in terms of prettiness). 
+          And boy I have so much to tell you about my time there! 
+      </p>
+      <p>
+          Before heading to the Dutch capital, I did a lot of research, reading a pocket guidebook cover to cover and receiving a few recommendations for places to go. 
+          In truth I don't think I've been more excited about a holiday: it was the first city break my boyfriend and I have been on, 
+          and after almost a year of working solidly. a week away was so appealing. 
+      </p>
+    </section>
+
+    <aside>
+      <!-- AUTHOR SECTION -->
+      <section id="author-section" role="complementary">
+        <h3>
+          About Me
+          <span class="line-h3"></span>
+        </h3>
+        <img src="images/autor-image.jpeg" alt="Author Photography in black and white color" title="Author Image">
+        <p>
+          Hi,<br>
+          I am Carla W<br>
+          I am web designer/ developer based in Toronto Canada.<br>
+          I have a passion for web design and love to create for web and mobile devices.
+        </p>
+      </section>
+
+      <!-- FORM SECTION -->
+      <section id="contact-section" role="form">
+          <h3>
+            Contact Me
+            <span class="line-h3"></span>
+          </h3>
+          <form>
+            <label for="email">
+                <input type="email" name="email" id="email" placeholder="Type your email" aria-required="true" >
+            </label>
+            <textarea name="message" placeholder="Text..." aria-required="true"  aria-label="Message box" ></textarea>
+            <button type="submit" name="submit" value="submit" role="button"  aria-label="Send Form" >Submit</button>
+          </form>
+        </section>
+      </aside>
+    </div>
+
+  <!-- FOOTER -->
+  <footer>
+    Develop by:  <span>Carla W.</span>
+  </footer>
+</body>
+</html>

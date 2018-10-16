@@ -1,0 +1,118 @@
+/* Shared
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button {
+  border-radius: 100px;
+}
+
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section {
+  padding: 8rem 0 7rem;
+  text-align: center;
+}
+.section-heading,
+.section-description {
+  margin-bottom: 1.2rem;
+}
+
+@media (min-width: 1024px) {
+  .section:nth-of-type(1) {
+    padding-top: 220px;
+    padding-bottom: 220px;
+  }
+  .section {
+    padding-top: 200px;
+    padding-bottom: 190px;
+  }
+  
+}
+/* Hero
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.phones {
+  position: relative;
+}
+.phone {
+  position: relative;
+  max-width: 80%;
+  margin: 3rem auto -12rem;
+}
+.phone + .phone {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .phones {
+    display: block;
+    text-align: left;
+    left: 100px;
+  }
+  .phone {
+    max-width: 80%;
+    max-height: 615px;
+    top: -160px;
+    z-index: 3;
+    position: absolute;
+    left: 10px;
+  }
+  .phone + .phone {
+    display: block;
+    top: -140px;
+    max-height: 570px;
+    max-width: 73.8%;
+    z-index: 2;
+    left: 82px;
+  }
+}
+/* Values
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.values {
+  background-image: url('../images/values-bg.jpg');
+  background-size: cover;
+  color: #fff;
+  padding-bottom: 5rem;
+}
+.value-multiplier {
+  margin-bottom: .5rem;
+  color: #11DFC7;
+}
+.value-heading {
+  margin-bottom: .3rem;
+}
+.value-description {
+  opacity: .8;
+  font-weight: 300;
+}
+@media (min-width: 1024px) {
+  .values {
+    padding-bottom: 190px;
+  } 
+}
+/* Help
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.get-help {
+  border-bottom: 1px solid #ddd;
+}
+@media (min-width: 1024px) {
+  .get-help .section-description {
+    max-width: 576px;
+    margin: auto;
+    margin-bottom: 12px;
+  }
+}
+/* Categories
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.categories {
+  background-image: url('../images/values-bg.jpg');
+  background-size: cover;
+  color: #fff;
+}
+.categories .section-description {
+  margin-bottom: 4rem;
+}
+@media (min-width: 1024px) {
+  .categories .section-description {
+    max-width: 60%;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+}
+

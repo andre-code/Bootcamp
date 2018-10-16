@@ -1,0 +1,27 @@
+div.magazine-photo {
+  width: 700px;
+  height: 400px;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: 0% 55%;
+  background-image: url('http://raiscake.me/files/fashion-bg.jpg');
+}
+.magazine-photo-title {
+  position: relative;
+  top: 250px;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 46px;
+}
+
+.text-uppercase { 
+  font-family: 'Play', sans-serif;
+  display: block;
+}
+.line { 
+  width: 150px;
+  margin: 0 auto;
+  border: 1px solid #000;
+  position: relative;
+  top: 215px;
+}
