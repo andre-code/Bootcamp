@@ -82,14 +82,14 @@ class ContactCard extends Component {
     this.state = {
 
     }
-    this.callAddFunction = this.callAddFunction.bind(this);
-    this.callDeleteFunction = this.callDeleteFunction.bind(this);
+    //this.callAddFunction = this.callAddFunction.bind(this);
+    //this.callDeleteFunction = this.callDeleteFunction.bind(this);
   }
 
-  callAddFunction() {
+  callAddFunction = () => {
     this.props.addFunction( this.props.contact );
   }
-  callDeleteFunction() {
+  callDeleteFunction = () => {
     this.props.deleteFunction( this.props.contact );
   }
   render() {
