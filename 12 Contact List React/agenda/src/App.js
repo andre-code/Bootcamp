@@ -8,52 +8,90 @@ class App extends Component {
       all: [],
       favorites: []
     }
-    this.addFavorites = this.addFavorites.bind(this);
+    //this.addFavorites = this.addFavorites.bind(this);
   }
   componentDidMount() {
     fetch("https://randomuser.me/api/?results=10")
       .then(results => results.json())
       .then( data => {
-        console.log(data.results);
         this.setState({
           all: data.results
         })
-        console.log(this.state);
       })    
   }
 
-  addFavorites ( contact ) {
+  addFavorites = card  => {
     console.log( "add favorites" );
-    console.log( contact );
     this.setState(previousState => ({
-      favorites: [...previousState.favorites, contact ]
-    }));
-    console.log( this.favorites );
+      favorites: [...previousState.favorites, card ]
+    })); 
+    this.deleteAll( card )
+  }
 
+  addAll = card  => {
+    console.log( card );
+    this.setState(previousState => ({
+      all: [...previousState.all, card ]
+    })); 
+    this.deleteFavorites( card )
+  }
+
+  deleteAll = card  => {
+    console.log( "delete all" );
+    var newContactArray = this.state.all.filter(function(contactItem){
+      return contactItem !== card
+    });
+    this.setState({
+      all: newContactArray
+    });
+  }
+
+  deleteFavorites = card  => {
+    console.log( "delete favorites" );
+    var newContactArray = this.state.favorites.filter(function(contactItem){
+      return contactItem !== card
+    });
+    this.setState({
+      favorites: newContactArray
+    });
   }
   render() {
-    console.log (this.state);
     return (
       <div className="App">
-        <ContactList contacts = {this.state.all} title="All" />
-        <ContactList contacts= {this.state.favorites} title="Favorites" />
+        <ContactList contacts = {this.state.all} title="All" titlebutton="Favorites" addFunction = {this.addFavorites} deleteFunction = {this.deleteAll} />
+        <ContactList contacts= {this.state.favorites} title="Favorites" titlebutton="All" addFunction = {this.addAll}  deleteFunction = {this.deleteFavorites}/>
       </div>
     );
   }
 }
 
 const ContactList = (props) => {
-  console.log(props);
   return (
     <section>
       <h2>{props.title}</h2>
-      { props.contacts.map( contact => <ContactCard key={contact.name.first} contact={contact} /> )}    
+      { props.contacts.map( contact => <ContactCard key={contact.email} contact={contact} addFunction={props.addFunction} deleteFunction={props.deleteFunction} title = {props.titlebutton}  /> )}    
     </section>
     
   )
 }
 
 class ContactCard extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+
+    }
+    this.callAddFunction = this.callAddFunction.bind(this);
+    this.callDeleteFunction = this.callDeleteFunction.bind(this);
+  }
+
+  callAddFunction() {
+    this.props.addFunction( this.props.contact );
+  }
+  callDeleteFunction() {
+    this.props.deleteFunction( this.props.contact );
+  }
   render() {
     return (
       <div className="contact-card">
@@ -67,8 +105,8 @@ class ContactCard extends Component {
             </p>
           </figcaption>
         </figure>
-        <button onClick={this.props.addFavorites}>Favorite</button>
-        <button onClick={this.props.addFavorites}>Delete</button>
+        <button onClick={this.callAddFunction}>Add {this.props.title}</button>
+        <button onClick={this.callDeleteFunction}>Delete</button>
       </div>
     )
   }
