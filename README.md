@@ -11,5 +11,5 @@ Bootcamp Exercises. A  Journey from HTML, CSS, JS to
 8️⃣ Blog responsive (session 5) Look how it works in https://andre-code.github.io/Bootcamp/3%20y%208%20Blog%20Layout/ <br>
 9️⃣ Party (session 6) Look how it works in https://andre-code.github.io/Bootcamp/9%20Party/ <br>
 🔟 Contact list (session 7) Look how it works https://andre-code.github.io/Bootcamp/10%20Contact%20List/ <br>
-1️⃣1️⃣ Prototype & Classes (session 8)
-1️⃣2️⃣ Contact list - React (session 8)
+1️⃣1️⃣ Prototype & Classes (session 8) <br>
+1️⃣2️⃣ Contact list - React (session 8) <br>
