@@ -1,5 +1,5 @@
 # Bootcamp
-Bootcamp Exercises. A  Journey from HTML, CSS, JS to 
+Bootcamp Exercises. A  Journey from HTML, CSS, JS to React
 
 1⃣ Poster (session 2)  https://andre-code.github.io/Bootcamp/1%20Poster/ <br>
 2️⃣ Magazine Cover (session 2)  https://andre-code.github.io/Bootcamp/2%20Magazine%20cover/ <br>
