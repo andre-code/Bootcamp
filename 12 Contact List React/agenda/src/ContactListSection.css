@@ -1,9 +1,4 @@
-:root {
-  --main-title-color: #268a74;
-  --main-bg-color: #f5f5f5;
-  --main-bg-button: #207763;
-  --main-light-txt-color: #fff;
-}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -20,6 +15,7 @@ section h2 {
 }
 .contact-card {
   width: 440px;
+  margin: auto;
   padding: 20px;
   box-shadow: 5px 5px 12px #ccc;
   margin-bottom: 30px;
