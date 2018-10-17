@@ -1,3 +1,9 @@
+:root {
+  --main-title-color: #268a74;
+  --main-bg-color: #f5f5f5;
+  --main-bg-button: #207763;
+  --main-light-txt-color: #fff;
+}
 body {
   margin: 0;
   padding: 0;
@@ -20,14 +26,14 @@ section {
 section h2 {
   font-family: 'Satisfy', cursive;
   font-size: 34px;
-  color: #f19191;
+  color: var(--main-title-color);
 }
 .contact-card {
   width: 440px;
   padding: 20px;
   box-shadow: 5px 5px 12px #ccc;
   margin-bottom: 30px;
-  background-color: #f5f5f5;
+  background-color: var(--main-bg-color);
 }
 .contact-card figure {
   margin: 0px;
@@ -40,12 +46,14 @@ section h2 {
 .contact-card figure img {
   float: left;
   border-radius: 50%;
-  border: 4px dotted #f4b1b2;
+  border: 4px dotted var(--main-title-color);
 }
 button {
-  background-color: #f19091ad;
+  background-color: var(--main-bg-button);
   border-radius: 35px;
   padding: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
   border: 0px;
-  color: #fff;
+  color: var(--main-light-txt-color);
 }

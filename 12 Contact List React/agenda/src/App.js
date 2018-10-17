@@ -65,6 +65,7 @@ class App extends Component {
   }
 }
 
+// Stateless, component as function
 const ContactList = (props) => {
   return (
     <section>
@@ -82,7 +83,7 @@ class ContactCard extends Component {
     this.state = {
 
     }
-    //this.callAddFunction = this.callAddFunction.bind(this);
+    //this.callAddFunction = this.callAddFunction.bind(this); 
     //this.callDeleteFunction = this.callDeleteFunction.bind(this);
   }
 
