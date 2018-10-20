@@ -40,15 +40,24 @@ class TodoList extends Component {
         
         if( newStateTask.length > 0 )
           this.reloadTask(newStateTask); 
+      } else {
+        this.reloadTask(newStateTask); 
       }
     });  
   }
   reloadTask =  newTasks => {
-    this.setState( {tasks: newTasks} );
-    this.setState({
-      tasks: this.orderTasks( newTasks ),
-      lastPosition : this.getLastTaskPosition( newTasks )
-    })
+    if( newTasks.length > 0) {
+      this.setState( {tasks: newTasks} );
+      this.setState({
+        tasks: this.orderTasks( newTasks ),
+        lastPosition : this.getLastTaskPosition( newTasks )
+      })
+    } else {
+      this.setState({
+        tasks: [],
+        lastPosition : 0
+      })
+    }
   }
 
   addTask = newTask => { 
@@ -71,8 +80,8 @@ class TodoList extends Component {
     taskRefFirebase.set( values.val );
   }
   upTask = position => {
-    var taskBefore = [];
-    var allTasks = this.state.tasks;
+    let taskBefore = [];
+    let allTasks = this.state.tasks;
     
     for( let task in  allTasks ) {
       if( allTasks[task].position === position && Object.keys(taskBefore).length > 0 ) {
@@ -87,7 +96,7 @@ class TodoList extends Component {
   }
 
   orderTasks = arrayToOrder => {
-    var orderedTask = arrayToOrder.sort((a, b) => parseFloat(a.position) - parseFloat(b.position));
+    let orderedTask = arrayToOrder.sort((a, b) => parseFloat(a.position) - parseFloat(b.position));
     return orderedTask;
   }
   render() {

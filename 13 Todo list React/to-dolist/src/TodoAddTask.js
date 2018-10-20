@@ -10,7 +10,7 @@ class TodoAddTask extends Component {
   }
   callAddTask = e => {
     if( e.key === 'Enter' ) {
-      var newTask = {
+      let newTask = {
         date: this.props.taskDate,
         task: this.state.taskText,
         isDone: false,

@@ -1,5 +1,5 @@
 import firebase from 'firebase';
-var config = {
+const config = {
   apiKey: "AIzaSyBfVSuvO0YJZv-_rkNZ-WZFM9Vf-cPdOlM",
   authDomain: "todolist-27393.firebaseapp.com",
   databaseURL: "https://todolist-27393.firebaseio.com",

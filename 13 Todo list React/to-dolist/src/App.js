@@ -4,13 +4,16 @@ import './App.css';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 const ListDates = ()  => {
-  const dates = ['2018-10-17','2018-10-18','2018-10-19'];
+
+  const dates = ['2018-10-17','2018-10-18','2018-10-19', '2018-10-20'];
+  
   return (
     <div>
       <h1> Dates To-do List </h1>
       <nav>
         <ul>
-          { dates.map( date => <Link  key={date} to = {`/todolist/${date}`}> {date} </Link>)}   
+          { dates.map( date => <Link  key={date} to = {`/todolist/${date}`}> {date} </Link>)} 
+          
         </ul>
       </nav>
     </div>

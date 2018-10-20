@@ -14,7 +14,7 @@ class TodoTask extends Component {
     this.props.upFunction( this.props.task.position );
   }
   callTaskDone = e => {
-    var values = {
+    const values = {
       id: this.props.task.id,
       var: "isDone",
       val: e.target.checked
