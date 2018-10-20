@@ -11,9 +11,9 @@ class TodoTask extends Component {
     this.props.deleteFunction( this.props.task );
   }
   callUpFunction = () => {
-    this.props.upFunction(this.props.task.position);
+    this.props.upFunction( this.props.task.position );
   }
-  callTaskDone = ( e ) => {
+  callTaskDone = e => {
     var values = {
       id: this.props.task.id,
       var: "isDone",

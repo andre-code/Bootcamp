@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import './TodoAddTask.css';
 
-
 class TodoAddTask extends Component {
-  constructor(props) {
+  constructor( props ) {
     super(props);
     this.state = {
       taskText: ''
     }
   }
-  callAddTask = (e) => {
-    if (e.key === 'Enter') {
+  callAddTask = e => {
+    if( e.key === 'Enter' ) {
       var newTask = {
         date: this.props.taskDate,
         task: this.state.taskText,
@@ -18,11 +17,11 @@ class TodoAddTask extends Component {
         position: this.props.lastPosition + 1
       }
       this.props.addTask( newTask );
-      document.getElementById("taskfield").value = '';
+      document.getElementById( "taskfield" ).value = '';
     }
   }
-  updateTextTask = (e) => {
-    this.setState({taskText: e.target.value});
+  updateTextTask = e => {
+    this.setState( {taskText: e.target.value} );
   }
   render() {
     return (
@@ -36,8 +35,7 @@ class TodoAddTask extends Component {
               id="taskfield" 
               onChange={this.updateTextTask} 
               onKeyPress={this.callAddTask} 
-              placeholder="Write here your task and press Enter to save"
-            />
+              placeholder="Write here your task and press Enter to save"/>
           </label> 
         </div>
       </div>

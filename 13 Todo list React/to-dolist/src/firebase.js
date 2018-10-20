@@ -7,5 +7,5 @@ var config = {
   storageBucket: "todolist-27393.appspot.com",
   messagingSenderId: "817512633202"
 };
-firebase.initializeApp(config);
+firebase.initializeApp( config );
 export default firebase;
