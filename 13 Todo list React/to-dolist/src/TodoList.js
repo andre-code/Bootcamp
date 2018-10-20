@@ -17,9 +17,7 @@ class TodoList extends Component {
   }
   getDate = () => {
     if (this.props.match.params.dateTask) {
-			return this.props.match.params.dateTask
-		} else {
-			return '2018-10-20'
+			return this.props.match.params.dateTask;
 		}
   }
   componentDidMount() {
@@ -36,14 +34,15 @@ class TodoList extends Component {
             isDone: fTasks[ftask].isDone,
             position: fTasks[ftask].position
           });
-        }
-        
-        if( newStateTask.length > 0 )
-          this.reloadTask(newStateTask); 
+        }       
+        if( newStateTask.length > 0 ) this.reloadTask(newStateTask); 
       } else {
         this.reloadTask(newStateTask); 
       }
     });  
+  }
+  componentWillUnmount() {
+    window.removeEventListener('beforeunload', this)
   }
   reloadTask =  newTasks => {
     if( newTasks.length > 0) {
