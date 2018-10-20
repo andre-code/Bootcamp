@@ -19,7 +19,7 @@ class TodoList extends Component {
     if (this.props.match.params.dateTask) {
 			return this.props.match.params.dateTask
 		} else {
-			return '2018-10-19'
+			return '2018-10-20'
 		}
   }
   componentDidMount() {
