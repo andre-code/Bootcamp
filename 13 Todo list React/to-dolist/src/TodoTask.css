@@ -1,0 +1,62 @@
+.task {
+  width: 600px;
+  height: 50px;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  margin-top: 10px;
+  box-shadow: 3px 5px 10px #227175;
+}
+.task div {
+  float: left
+}
+.task div:nth-of-type(1) {
+  width: 10%;
+  text-align: center;
+}
+.task div:nth-of-type(2) {
+  float: left;
+  width: 70%;
+  text-align: left;
+  padding-left: 15px;
+  color: #404040;
+}
+.task div:nth-of-type(3) {
+  width: 20%;
+}
+button {
+  border: none;
+}
+button img {
+  width: 35px;
+}
+.styledCheckbox {
+  -webkit-appearance: none;
+  background-color: #ffffff;
+  border: 1px solid #1da5ac;
+  padding: 15px;
+  border-radius: 1px;
+  display: inline-block;
+  position: relative;
+}
+.styledCheckbox:active, .styledCheckbox:checked:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.styledCheckbox:checked {
+  background-color: #fff;
+  border: 1px solid #96cdd1;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+  color: #ffffff;
+}
+.styledCheckbox:checked:after {
+	content: '\2714';
+	font-size: 28px;
+	position: absolute;
+	top: 0px;
+	left: 3px;
+	color: #1da5ac;
+}
