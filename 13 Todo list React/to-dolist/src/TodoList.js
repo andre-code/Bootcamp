@@ -91,13 +91,21 @@ class TodoList extends Component {
     return orderedTask;
   }
   render() {
-    console.log("rendering ",this.state.taskDate);
+    const theresTask = this.state.tasks.length === 0 ? true : false ;
     return( 
       <section>
-        <Link  to = {`/`} className="back-link"  > <img src="../left-arrow.png" alt="Go Back"/> Go to dates list</Link>
+        <Link to = {`/`} className="back-link">
+          <img src="../left-arrow.png" alt="Go Back"/> Go to dates list
+        </Link>
         <h1> To-do List </h1>
-        <p> {this.state.taskDate} </p>
-        { this.state.tasks.map( task => <TodoTask key={task.id} task={task} deleteFunction={this.removeTask} updateFunction={this.updateTask} upFunction={this.upTask} /> )}    
+        <p> {this.state.taskDate} </p>  
+        {theresTask ? (
+            <p> You don't have tasks yet!!!   
+              <img src="../sad.png" alt="sad img" className="emoji-img" /> </p>
+        ) : (
+          this.state.tasks.map( task => <TodoTask key={task.id} task={task} deleteFunction={this.removeTask} updateFunction={this.updateTask} upFunction={this.upTask} /> )
+        )
+        }
         <TodoAddTask addTask={this.addTask} lastPosition={this.state.lastPosition} taskDate={this.state.taskDate} />
       </section>
     )
