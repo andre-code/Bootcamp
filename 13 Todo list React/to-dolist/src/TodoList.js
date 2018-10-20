@@ -7,31 +7,26 @@ import './TodoList.css';
 class TodoList extends Component {
   constructor(props) {
     super(props)
-    console.log("in TodoList", props);
     const taskDate = this.getDate();
     this.state = {
       taskDate: taskDate,
       tasks: [],
       lastPosition: 0
     }
-    console.log ("constructor de todolist", props);
   }
   getDate = () => {
-    if (this.props.params.dateTask) {
-			return this.props.params.dateTask
+    if (this.props.match.params.dateTask) {
+			return this.props.match.params.dateTask
 		} else {
 			return '2018-10-19'
 		}
   }
   componentDidMount() {
-    console.log("in cm", this.state.taskDate );
     const taskRefFirebase = firebase.database().ref(`/tasks/${this.state.taskDate}`);     
     taskRefFirebase.on( 'value', (snapshot) => {   
       let newStateTask = [];
       let fTasks = snapshot.val();
-
       if( fTasks ) {
-        fTasks = fTasks[this.state.taskDate];
         for( let ftask in fTasks ) {
           newStateTask.push({
             id: ftask,
@@ -41,6 +36,7 @@ class TodoList extends Component {
             position: fTasks[ftask].position
           });
         }
+        
         if( newStateTask.length > 0 )
           this.reloadTask(newStateTask); 
       }

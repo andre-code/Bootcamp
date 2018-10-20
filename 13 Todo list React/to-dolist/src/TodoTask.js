@@ -30,10 +30,10 @@ class TodoTask extends Component {
         <div>{this.props.task.task}</div>
         <div>
           <button onClick={this.callRemoveFunction}>
-            <img src="dustbin.png" alt="Delete" />
+            <img src="../dustbin.png" alt="Delete" />
           </button>
           <button onClick={this.callUpFunction}>
-            <img src="upload.png" alt="Up" />
+            <img src="../upload.png" alt="Up" />
           </button>
         </div>
       </div>

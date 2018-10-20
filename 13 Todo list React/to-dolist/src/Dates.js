@@ -29,7 +29,7 @@ class Dates extends Component {
       <BrowserRouter>
         <div>
           <NavigationDate/>
-          <Route exact path="/todolist:dateTask" component={TodoList}/>
+          <Route exact path="/todolist/:dateTask" component={TodoList}/>
         </div>
       </BrowserRouter>
     </section>
