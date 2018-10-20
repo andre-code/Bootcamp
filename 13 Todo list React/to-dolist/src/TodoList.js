@@ -7,14 +7,24 @@ import './TodoList.css';
 class TodoList extends Component {
   constructor(props) {
     super(props)
+    console.log("in TodoList", props);
+    const taskDate = this.getDate();
     this.state = {
-      taskDate: '',
+      taskDate: taskDate,
       tasks: [],
       lastPosition: 0
     }
+    console.log ("constructor de todolist", props);
+  }
+  getDate = () => {
+    if (this.props.params.dateTask) {
+			return this.props.params.dateTask
+		} else {
+			return '2018-10-19'
+		}
   }
   componentDidMount() {
-    this.setState( {taskDate: '2018-10-19'} ); // then we will get the date by currentday to have a todo-list per day
+    console.log("in cm", this.state.taskDate );
     const taskRefFirebase = firebase.database().ref(`/tasks/${this.state.taskDate}`);     
     taskRefFirebase.on( 'value', (snapshot) => {   
       let newStateTask = [];
@@ -84,6 +94,7 @@ class TodoList extends Component {
     return orderedTask;
   }
   render() {
+    console.log("rendering ",this.state.taskDate);
     return( 
       <section>
         <h1> To-do List </h1>
