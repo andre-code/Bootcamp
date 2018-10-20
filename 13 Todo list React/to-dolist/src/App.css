@@ -18,5 +18,24 @@ h1 {
   font-size: 40px;
   margin-bottom: 0px;
 }
+nav ul {
+  display: flex;
+  width: 800px;
+  margin: auto;
+  padding-top: 20px;
+}
+nav ul a {
+  width: 200px;
+  height: 50px;
+  background-color: #fff;
+  margin: 20px;
+  text-align: center;
+  padding-top: 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #228898;
+  font-size: 26px;
+  font-family: 'Amatic SC', cursive;
+}
 
 

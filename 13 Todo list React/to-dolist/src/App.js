@@ -1,22 +1,16 @@
 import React, { Component } from 'react';
 import TodoList from './TodoList';
-import Dates from './Dates';
 import './App.css';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 
-const Navigation = (props)  => {
+const ListDates = ()  => {
+  const dates = ['2018-10-17','2018-10-18','2018-10-19'];
   return (
     <div>
+      <h1> Dates To-do List </h1>
       <nav>
         <ul>
-          <li>
-            <Link to = {`/`}>
-            Dates </Link>
-          </li>
-          <li>
-            <Link to = {`/todolist`}>
-            To do list </Link>
-          </li>
+          { dates.map( date => <Link  key={date} to = {`/todolist/${date}`}> {date} </Link>)}   
         </ul>
       </nav>
     </div>
@@ -32,13 +26,14 @@ class App extends Component {
   render() {
     return (
       <div className="main">
-        <BrowserRouter>
-          <div>
-            <Navigation/>
-            <Route exact path="/" component={Dates}/>
-            <Route exact path="/todolist" component={TodoList} />
-          </div>
-        </BrowserRouter>
+        <section>
+          <BrowserRouter>
+            <div>
+              <Route exact path="/" component={ListDates}/>
+              <Route path="/todolist/:dateTask" component={TodoList}/>
+            </div>
+          </BrowserRouter>
+        </section>
       </div>
     );
   } 

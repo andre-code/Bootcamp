@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TodoTask from './TodoTask';
+import { Link } from 'react-router-dom';
 import TodoAddTask from './TodoAddTask';
 import firebase from './firebase.js';
 import './TodoList.css';
@@ -93,6 +94,7 @@ class TodoList extends Component {
     console.log("rendering ",this.state.taskDate);
     return( 
       <section>
+        <Link  to = {`/`} className="back-link"  > <img src="../left-arrow.png" alt="Go Back"/> Go to dates list</Link>
         <h1> To-do List </h1>
         <p> {this.state.taskDate} </p>
         { this.state.tasks.map( task => <TodoTask key={task.id} task={task} deleteFunction={this.removeTask} updateFunction={this.updateTask} upFunction={this.upTask} /> )}    
